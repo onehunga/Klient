@@ -7,9 +7,11 @@ The goal is to write a fully functional minecraft client.
 ## Next Steps
 - [x] Hide dot commands from the chat
 - [ ] commands
-  - [ ] command manager
-  - [ ] command interface
+  - [x] command manager
+  - [x] command interface
+  - [ ] execute error
   - [ ] command builder/parser
+  - [ ] complete helper
 - [ ] module
   - [ ] module base
   - [ ] module manager
