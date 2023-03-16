@@ -6,12 +6,13 @@ The goal is to write a fully functional minecraft client.
 
 ## Next Steps
 - [x] Hide dot commands from the chat
-- [ ] events
-  - [ ] event manager
-  - [ ] chat event
-  - [ ] key event
 - [ ] commands
+  - [ ] command manager
   - [ ] command interface
   - [ ] command builder/parser
-  - [ ] command manager
-- [ ] input
+- [ ] module
+  - [ ] module base
+  - [ ] module manager
+- [ ] keybinds
+- [ ] utils
+  - [ ] file save/load
