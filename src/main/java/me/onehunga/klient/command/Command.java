@@ -12,5 +12,5 @@ public abstract class Command {
 		return this.name.equalsIgnoreCase(name);
 	}
 
-	public abstract boolean execute(String[] args);
+	public abstract void execute(String[] args) throws CommandException;
 }

@@ -9,12 +9,16 @@ The goal is to write a fully functional minecraft client.
 - [ ] commands
   - [x] command manager
   - [x] command interface
-  - [ ] execute error
+  - [x] execute error
   - [ ] command builder/parser
   - [ ] complete helper
 - [ ] module
   - [ ] module base
   - [ ] module manager
+- [ ] HUD
+  - [ ] Array List
+  - [ ] Click Gui
 - [ ] keybinds
 - [ ] utils
+  - [x] chat utils
   - [ ] file save/load

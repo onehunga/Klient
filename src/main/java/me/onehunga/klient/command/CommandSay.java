@@ -9,13 +9,13 @@ public class CommandSay extends Command {
 	}
 
 	@Override
-	public boolean execute(String[] args) {
-		if (args.length == 0) return true;
+	public void execute(String[] args) throws CommandException {
+		if(args.length == 0) {
+			throw new CommandException("Usage: .say <message>");
+		}
 
 		String say = String.join(" ", args);
 
 		MinecraftClient.getInstance().player.networkHandler.sendChatMessage(say);
-
-		return true;
 	}
 }

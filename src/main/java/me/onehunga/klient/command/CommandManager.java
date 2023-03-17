@@ -24,17 +24,23 @@ public class CommandManager {
 		String raw = command.substring(1);
 		String[] split = raw.split(" ");
 
-		if (split.length == 0) return false;
+		if(split.length == 0) return false;
 
 		Command cmd = commandList.stream().filter(c -> c.match(split[0])).findFirst().orElse(null);
-		if (cmd == null) {
+		if(cmd == null) {
 			ChatUtils.send("command " + split[0] + " doesn't exist");
 			return false;
 		}
+		try{
+			String[] args = new String[split.length - 1];
+			System.arraycopy(split, 1, args, 0, split.length - 1);
 
-		String[] args = new String[split.length - 1];
-		System.arraycopy(split, 1, args, 0, split.length - 1);
-
-		return cmd.execute(args);
+			cmd.execute(args);
+		}
+		catch(CommandException e) {
+			ChatUtils.send("§c" + e.getMessage());
+			return false;
+		}
+		return true;
 	}
 }
