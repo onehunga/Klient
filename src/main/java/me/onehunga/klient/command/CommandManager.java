@@ -18,6 +18,7 @@ public class CommandManager {
 
 	private void addCommands() {
 		commandList.add(new CommandSay());
+		commandList.add(new CommandToggle());
 	}
 
 	public boolean execute(@NotNull String command) {
