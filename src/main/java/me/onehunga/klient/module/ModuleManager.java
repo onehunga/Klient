@@ -1,5 +1,6 @@
 package me.onehunga.klient.module;
 
+import me.onehunga.klient.module.movement.Speed;
 import me.onehunga.klient.module.movement.Sprint;
 
 import java.util.ArrayList;
@@ -12,12 +13,13 @@ public class ModuleManager {
 	public ModuleManager() {
 		modules = new ArrayList<>();
 
+		modules.add(new Speed());
 		modules.add(new Sprint());
 	}
 
 	/**
 	 * @param name name of the module
-	 * @return returs true if the module was found
+	 * @return true if the module was found
 	 */
 	public boolean toggle(String name) {
 		for(ModuleBase module : modules) {
@@ -27,6 +29,22 @@ public class ModuleManager {
 			}
 		}
 		return false;
+	}
+
+	public List<ModuleBase> getEnabledModules() {
+		List<ModuleBase> enabled = new ArrayList<>();
+		modules.forEach(module -> {
+			if(module.enabled) {
+				enabled.add(module);
+			}
+		});
+		return enabled;
+	}
+
+	public void onKey(int key) {
+		modules.forEach(it -> {
+			if(it.key == key) it.toggle();
+		});
 	}
 
 	public void onTick() {

@@ -26,6 +26,10 @@ public class Klient implements ModInitializer {
 		moduleManager.onTick();
 	}
 
+	public void onKeyDown(int key) {
+		moduleManager.onKey(key);
+	}
+
 	@Override
 	public void onInitialize() {
 		logger.info("starting client");

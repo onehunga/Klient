@@ -4,7 +4,7 @@ import me.onehunga.klient.Klient;
 
 public class CommandToggle extends Command {
 	protected CommandToggle() {
-		super("toggle");
+		super("toggle", "t");
 	}
 
 	@Override

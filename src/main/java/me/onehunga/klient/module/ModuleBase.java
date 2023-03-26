@@ -6,15 +6,17 @@ public class ModuleBase {
 	public final ModuleCategory category;
 	public final String name;
 	public final String description;
+	public int key;
 	public boolean enabled;
 
 	protected MinecraftClient mc;
 
-	protected ModuleBase(ModuleCategory category, String name, String description, boolean enabled) {
+	protected ModuleBase(ModuleCategory category, String name, String description, int key, boolean enabled) {
 		this.category = category;
 		this.name = name;
 		this.description = description;
 		this.enabled = enabled;
+		this.key = key;
 
 		this.mc = MinecraftClient.getInstance();
 	}
