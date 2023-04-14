@@ -1,7 +1,8 @@
 package me.onehunga.klient.module;
 
 public enum ModuleCategory {
-	MOVEMENT("Movement");
+	MOVEMENT("Movement"),
+	RENDER("Render");
 
 	public final String displayName;
 

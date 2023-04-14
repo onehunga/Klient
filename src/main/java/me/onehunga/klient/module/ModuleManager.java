@@ -2,6 +2,7 @@ package me.onehunga.klient.module;
 
 import me.onehunga.klient.module.movement.Speed;
 import me.onehunga.klient.module.movement.Sprint;
+import me.onehunga.klient.module.render.ClickGUI;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,8 @@ public class ModuleManager {
 
 		modules.add(new Speed());
 		modules.add(new Sprint());
+
+		modules.add(new ClickGUI());
 	}
 
 	/**
@@ -39,6 +42,16 @@ public class ModuleManager {
 			}
 		});
 		return enabled;
+	}
+
+	public List<ModuleBase> getModulesByCategory(ModuleCategory category) {
+		List<ModuleBase> modules = new ArrayList<>();
+		this.modules.forEach(module -> {
+			if(module.category == category) {
+				modules.add(module);
+			}
+		});
+		return modules;
 	}
 
 	public void onKey(int key) {
