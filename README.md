@@ -16,8 +16,14 @@ The goal is to write a fully functional minecraft client.
   - [x] module base
   - [x] module manager
 - [ ] HUD
-  - [ ] Array List
+  - [x] Array List
   - [ ] Click Gui
+    - [x] toggle modules
+    - [ ] module settings
+- [ ] Altmanager
+  - [x] cracked login
+  - [ ] save accounts
+  - [ ] premium login
 - [ ] keybinds
 - [ ] utils
   - [x] chat utils

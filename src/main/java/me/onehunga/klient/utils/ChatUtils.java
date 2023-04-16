@@ -6,6 +6,7 @@ import net.minecraft.text.Text;
 public class ChatUtils {
 
 	public static void send(final String s) {
-		MinecraftClient.getInstance().player.sendMessage(Text.literal(s));
+		MinecraftClient mc = MinecraftClient.getInstance();
+		mc.player.sendMessage(Text.of(s));
 	}
 }

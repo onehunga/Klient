@@ -32,5 +32,6 @@
 		"minecraft": "~1.19.3",
 		"java": ">=17"
 	},
-	"suggests": {}
+	"suggests": {},
+	"accessWidener": "klient.accesswidener"
 }

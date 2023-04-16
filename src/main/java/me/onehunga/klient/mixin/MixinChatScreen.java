@@ -15,7 +15,8 @@ public class MixinChatScreen {
 	private void handleMessage(String message, boolean addToHistory, CallbackInfoReturnable<Boolean> ci) {
 		if(message.startsWith(".") && message.length() > 1) {
 			if (Klient.INSTANCE.commandManager.execute(message)) {
-				MinecraftClient.getInstance().inGameHud.getChatHud().addToMessageHistory(message);
+				MinecraftClient mc = MinecraftClient.getInstance();
+				mc.inGameHud.getChatHud().addToMessageHistory(message);
 			}
 			// we don't want to sent dot messages to the chat
 			ci.cancel();

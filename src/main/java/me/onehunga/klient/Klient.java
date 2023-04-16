@@ -16,17 +16,23 @@ public class Klient implements ModInitializer {
 	public CommandManager commandManager;
 	public ModuleManager moduleManager;
 
+	private MinecraftClient mc;
+
 	public Klient() {
 		INSTANCE = this;
 
 		commandManager = new CommandManager();
 		moduleManager = new ModuleManager();
+
+		mc = MinecraftClient.getInstance();
 	}
 
 	public Logger logger = LogManager.getLogger(Klient.class);
 
 	public void onTick() {
-		moduleManager.onTick();
+		if(mc.player != null) {
+			moduleManager.onTick();
+		}
 	}
 
 	public void onKeyDown(int key) {
