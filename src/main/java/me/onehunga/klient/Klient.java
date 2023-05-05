@@ -16,7 +16,7 @@ public class Klient implements ModInitializer {
 	public CommandManager commandManager;
 	public ModuleManager moduleManager;
 
-	private MinecraftClient mc;
+	private final MinecraftClient mc;
 
 	public Klient() {
 		INSTANCE = this;
