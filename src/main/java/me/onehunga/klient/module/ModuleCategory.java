@@ -1,6 +1,7 @@
 package me.onehunga.klient.module;
 
 public enum ModuleCategory {
+	COMBAT("Combat"),
 	MOVEMENT("Movement"),
 	RENDER("Render");
 

@@ -1,5 +1,6 @@
 package me.onehunga.klient.module;
 
+import me.onehunga.klient.module.combat.KillAura;
 import me.onehunga.klient.module.movement.Speed;
 import me.onehunga.klient.module.movement.Sprint;
 import me.onehunga.klient.module.render.ClickGUI;
@@ -13,6 +14,8 @@ public class ModuleManager {
 
 	public ModuleManager() {
 		modules = new ArrayList<>();
+
+		modules.add(new KillAura());
 
 		modules.add(new Speed());
 		modules.add(new Sprint());
